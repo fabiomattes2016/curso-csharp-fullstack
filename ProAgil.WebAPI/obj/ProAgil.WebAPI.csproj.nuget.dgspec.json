@@ -4,6 +4,116 @@
     "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "projectName": "ProAgil.Domain",
+        "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "packagesPath": "C:\\Users\\fabiomattes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabiomattes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "projectName": "ProAgil.Repository",
+        "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "packagesPath": "C:\\Users\\fabiomattes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabiomattes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +138,15 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              },
+              "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+                "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +157,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",

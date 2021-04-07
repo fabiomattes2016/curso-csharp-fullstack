@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProAgil.WebAPI.Data;
-using ProAgil.WebAPI.Model;
+using System;
+using System.Threading.Tasks;
 
 namespace ProAgil.WebAPI.Controllers
 {
@@ -19,8 +16,8 @@ namespace ProAgil.WebAPI.Controllers
         public EventosController(DataContext context)
         {
             _context = context;
-
         }
+
         // GET api/values
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -30,7 +27,7 @@ namespace ProAgil.WebAPI.Controllers
                 var results = await _context.Eventos.ToListAsync();
                 return Ok(results);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Erro interno do servidor");
             }
