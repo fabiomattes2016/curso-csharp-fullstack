@@ -11,7 +11,9 @@ export class EventosComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getEventos();
+  }
 
   getEventos() {
     const url = 'http://localhost:5000/api/v1/eventos';
