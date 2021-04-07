@@ -4,7 +4,6 @@
       <input type="text" class="form-control" placeholder="Tema" [(ngModel)]="filtroLista">
     </div>
   </div>
-  <h3>Filtro: {{filtroLista}}</h3>
 </div>
 
 <table class="table table-hover">
@@ -12,7 +11,7 @@
     <tr>
       <th>
         <button class="btn btn-outline-info" (click)="alternarImage()">
-          <i class="far {{iconImagem}}"></i>
+          <i class="{{mostrarImagem ? 'fa fa-eye-slash' : 'fa fa-eye'}}"></i>
         </button>
       </th>
       <th>#</th>
@@ -33,12 +32,16 @@
       <td>{{evento.eventoId}}</td>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
-      <td>{{evento.dataEvento}}</td>
+      <td>{{evento.dataEvento | date:'dd/MM/yyyy HH:mm:ss'}}</td>
       <td>{{evento.qtdPessoas}}</td>
-      <td>{{evento.lote | uppercase}}</td>
+      <td>{{evento.lotes[0].nome | uppercase}}</td>
       <td>
-        <button class="btn btn-warning me-2">E</button>
-        <button class="btn btn-danger">D</button>
+        <button class="btn btn-warning me-2">
+          <i class="far fa-edit"></i>
+        </button>
+        <button class="btn btn-danger">
+          <i class="far fa-trash-alt"></i>
+        </button>
       </td>
     </tr>
   </tbody>
