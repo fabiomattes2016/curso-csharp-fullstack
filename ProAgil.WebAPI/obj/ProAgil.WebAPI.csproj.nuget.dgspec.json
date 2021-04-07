@@ -28,7 +28,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -40,8 +39,15 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -81,7 +87,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {
               "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
                 "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
@@ -97,8 +102,15 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -138,7 +150,6 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "targetAlias": "netcoreapp2.2",
             "projectReferences": {
               "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
                 "projectPath": "C:\\Users\\fabiomattes\\Documents\\Projetos\\curso-dotnet-api-angular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
@@ -157,7 +168,6 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -167,6 +177,10 @@
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[2.2.0, )"
             },

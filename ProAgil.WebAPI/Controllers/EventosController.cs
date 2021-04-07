@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProAgil.WebAPI.Data;
+using ProAgil.Repository;
 using System;
 using System.Threading.Tasks;
 
@@ -11,9 +11,9 @@ namespace ProAgil.WebAPI.Controllers
     [ApiController]
     public class EventosController : ControllerBase
     {
-        public DataContext _context { get; }
+        public ProAgilContext _context { get; }
 
-        public EventosController(DataContext context)
+        public EventosController(ProAgilContext context)
         {
             _context = context;
         }
@@ -37,7 +37,7 @@ namespace ProAgil.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id) // .ToList().FirstOrDefault(x => x.EventoId == id);
         {
-            var result = await _context.Eventos.FirstOrDefaultAsync(x => x.EventoId == id);
+            var result = await _context.Eventos.FirstOrDefaultAsync(x => x.Id == id);
             return Ok(result);
         }
 
