@@ -48,10 +48,11 @@ export class EventosComponent implements OnInit {
   }
 
   getEventos() {
-    const url = 'http://localhost:5000/api/v1/eventos';
+    const url = 'http://localhost:5000/api/v1/evento';
     this.http.get(url).subscribe(
       (response) => {
         this.eventos = response;
+        console.log(response);
       },
       (error) => {
         console.log(error);
