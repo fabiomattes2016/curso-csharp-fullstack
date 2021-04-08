@@ -1,4 +1,4 @@
-<div class="mx-left" style="width: 450px;">
+<div class="mx-left" style="width: 450px; margin-top: 80px;">
   <div class="row mb-2">
     <div class="col-8">
       <input type="text" class="form-control" placeholder="Tema" [(ngModel)]="filtroLista">
@@ -10,7 +10,7 @@
   <thead>
     <tr>
       <th>
-        <button class="btn btn-outline-info" (click)="alternarImage()">
+        <button class="btn btn-outline-info" (click)="alternarImage()" tooltip="mostrar/ocultar">
           <i class="{{mostrarImagem ? 'fa fa-eye-slash' : 'fa fa-eye'}}"></i>
         </button>
       </th>
@@ -34,18 +34,25 @@
       <td>{{evento.local}}</td>
       <td>{{evento.dataEvento | date:'dd/MM/yyyy HH:mm:ss'}}</td>
       <td>{{evento.qtdPessoas}}</td>
-      <td>{{evento.lotes[0].nome | uppercase}}</td>
       <td>
-        <button class="btn btn-warning me-2">
+        <div *ngIf="!evento.lotes.length">
+          Não informado
+        </div>
+        <div *ngIf="evento.lotes.length">
+          {{evento.lotes[0].nome | uppercase}}
+        </div>
+      </td>
+      <td>
+        <button class="btn btn-sm btn-warning mr-2" tooltip="editar" (click)="openModal(template)">
           <i class="far fa-edit"></i>
         </button>
-        <button class="btn btn-danger">
+        <button class="btn btn-sm btn-danger" tooltip="excluir">
           <i class="far fa-trash-alt"></i>
         </button>
       </td>
     </tr>
   </tbody>
-  <tfoot *ngIf="!eventos.length">
+  <tfoot *ngIf="!eventosFiltrados.length">
     <tr>
       <td colspan="8" class="text-center">
         <h5>Nenhum evento encontrado!</h5>
@@ -53,3 +60,15 @@
     </tr>
   </tfoot>
 </table>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
